@@ -5,6 +5,8 @@ import { FaCartPlus } from "react-icons/fa";
 
 import { useState, useContext } from "react";
 
+import Image from 'next/image'
+
 function OneProductComponent(props) {
   const { updateQuantity ,cartItems} = useContext(AppStateContext);
   const [numberOfItems, setnumberOfItems] = useState(0);
@@ -38,11 +40,10 @@ function OneProductComponent(props) {
 
         <div className="item-name-price-price">{props.itemPrice}</div>
       </div>
-      <img
-        className="item-photo-container"
-        src={props.itemPhoto}
-        alt="image not found"
-      ></img>
+      <div className="item-photo-container" >
+      <Image src={props.itemPhoto} alt="image not found"  width =  "96%"  
+         height= "180px"></Image>
+      </div>
       <div className="number-of-items-container">
       <BiMinusCircle
           className="add-sub-del-icon"

@@ -4,7 +4,7 @@ import { AppStateContext } from "../AppGlobalState";
 import { FaTrashAlt } from "react-icons/fa";
 import { BiPlusCircle, BiMinusCircle } from "react-icons/bi";
 
-
+import Image from 'next/image'
 
 function CheckOutItem(props) {
 
@@ -62,11 +62,12 @@ function CheckOutItem(props) {
       <div className="one-chosen-item-container">
         <div>{i.itemName}</div>
         <div>{i.neededQuantity + "X" + i.itemPrice + "$"}</div>
-        <img
-          src={i.itemPhoto}
-          alt="No image"
-          className="one-chosen-item-photo"
-        ></img>
+      
+        <Image src={i.itemPhoto} alt="No image"  
+         width =  "50px"
+         height= "50px"
+        ></Image>
+        
         {isUpdateing ? (
           <div className="update-icons-container{">
             <BiPlusCircle className=" add-sub-del-icon"  onClick={()=>onCLickAdd(i.id)}/>
