@@ -16,19 +16,18 @@ function AllProductsComponent(props) {
   console.log(getAllItems())
   const [items, setItems] = useState([])
   
-  const getItems=async()=>{
-    var itemsArr =await  getAllItems()
-    setItems(itemsArr)
-  }
+
 
   const { setCartItems } = useContext(AppStateContext)
 
   // at the first render map all items with quantity = 0 
 
   useEffect(async () => {
-    await getItems()
+   // await getItems()
+   var itemsArr =await  getAllItems()
+   setItems(itemsArr)
     var itemsWithQuan = []
-    items.map((i) => { itemsWithQuan.push({ ...i, neededQuantity: 0 }) })
+    itemsArr.map((i) => { itemsWithQuan.push({ ...i, neededQuantity: 0 }) })
     setCartItems(itemsWithQuan)
 
   }, []);
