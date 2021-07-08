@@ -2,9 +2,7 @@
 
 import axios from 'axios';
 
-var baseUrl ="http://localhost:8000/"
-
-
+var baseUrl ="https://gebhalybe.herokuapp.com/"
 
 
 export function getAllItems() {
@@ -19,6 +17,5 @@ export function getAllItems() {
     })
     
 }
-
 
 
