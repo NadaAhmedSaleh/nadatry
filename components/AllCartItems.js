@@ -45,7 +45,7 @@ function Cart() {
             
         </div>
             {cartItems.map(i=>{return(
-                <CheckOutItem item={i} isUpdateing={isUpdateing}></CheckOutItem>
+                <CheckOutItem key={i.id} item={i} isUpdateing={isUpdateing}></CheckOutItem>
             )})}
         </div>
         <div className="total-cost-card">

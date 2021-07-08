@@ -27,7 +27,9 @@ function AllProductsComponent(props) {
    var itemsArr =await  getAllItems()
    setItems(itemsArr)
     var itemsWithQuan = []
-    itemsArr.map((i) => { itemsWithQuan.push({ ...i, neededQuantity: 0 }) })
+    itemsArr.map((i) => { 
+     
+      itemsWithQuan.push({ ...i, neededQuantity: 0 }) })
     setCartItems(itemsWithQuan)
 
   }, []);
@@ -40,7 +42,7 @@ function AllProductsComponent(props) {
     <div         className="allproducts-container"    >
       {items.map((i) => {
         return (
-          <OneProductComponent id={i.id} allItems={items} itemName={i.itemName} itemCategory={i.itemCategory} itemPrice={i.itemPrice + "$"} itemPhoto={i.itemPhoto}></OneProductComponent>
+          <OneProductComponent key={i.id} id={i.id} allItems={items} itemName={i.itemName} itemCategory={i.itemCategory} itemPrice={i.itemPrice + "$"} itemPhoto={i.itemPhoto}></OneProductComponent>
         )
       })}
 
