@@ -1,0 +1,15 @@
+$primary-gray:gray;
+$shaddow-gray:rgba(128, 128, 128, 0.74);
+
+
+.add-sub-del-icon{
+    color: $primary-gray;
+    font-size: xx-large;
+    &:hover{
+        cursor: pointer;
+        color: rgb(165, 162, 162);
+
+    }
+   
+    
+}

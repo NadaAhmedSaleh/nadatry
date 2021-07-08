@@ -1,0 +1,130 @@
+@import './global.scss';
+.check-out-main-container{
+    font-family: Sans-serif;
+    width: 800px;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+
+    border: 4px solid black;
+}
+
+.check-out-sub-container{
+   
+    height: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+   
+}
+
+.order-summary-header{
+    text-align: center;
+    width: 100%;
+    font-weight: bolder;
+    font-size: x-large;
+    color: white;
+    background-color: $primary-gray;
+    
+}
+
+
+
+.order-summary-container{
+
+    overflow-y: auto;
+    width: 60%;
+    height: 80%;
+    border: 2px solid $primary-gray;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    
+
+
+}
+
+
+.one-chosen-item-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+    padding: 3%;
+    border-bottom: 2px solid $primary-gray;
+    font-weight: bold;
+
+}
+
+.one-chosen-item-photo{
+    width: 50px;
+    height: 50px;
+}
+
+.customer-info-container{
+    overflow-y: auto;
+    width: 25%;
+    height: 80%;
+    border: 2px solid $primary-gray;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+}
+
+
+.check-out-header{
+    display: flex;
+    height: 5%;
+    width: 99%;
+    padding: 5px;
+    justify-content: space-between;
+    font-weight: bolder;
+    font-size: x-large;
+    color: $primary-gray;
+    border-bottom: 2px solid $primary-gray;
+    
+}
+
+.check-out-buttons-containers{
+    display: flex;
+    
+    margin-right: 5%;
+}
+
+
+@mixin update-confirm-button{
+    font-size: large;
+    padding: 4px;
+    border-radius: 2px;
+    color: white;
+    font-weight: bold;
+    margin-left: 5px;
+   
+    &:hover{
+        cursor: pointer;
+    }
+}
+
+.update-cart-button{
+    @include update-confirm-button;
+    background-color: orangered;
+    &:hover{
+        background-color: rgb(255, 107, 53)
+
+    }
+
+}
+.confirm-cart-button{
+    @include update-confirm-button;
+    background-color: green;
+    &:hover{
+        background-color: rgb(14, 192, 14);
+    }
+}
+
+
+.update-icons-container{
+    display: flex;
+    flex-direction: row;
+}
