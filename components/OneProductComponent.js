@@ -6,7 +6,7 @@ import { FaCartPlus } from "react-icons/fa";
 import { useState, useContext } from "react";
 
 function OneProductComponent(props) {
-  const { updateQuantity } = useContext(AppStateContext);
+  const { updateQuantity ,cartItems} = useContext(AppStateContext);
   const [numberOfItems, setnumberOfItems] = useState(0);
 
   // on click add or remove change item quantity to the current quantity
@@ -25,6 +25,7 @@ function OneProductComponent(props) {
 
   const onClickAddToCart = (id, newQuantity) => {
     updateQuantity(id, newQuantity, props.allItems);
+    setnumberOfItems(0)
   };
 
   return (

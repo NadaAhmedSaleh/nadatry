@@ -17,6 +17,7 @@ export const AppStateProvider = props => {
             : newCartItems.push(i);
         });
         setCartItems(newCartItems);
+        console.log(cartItems)
       };
 
   

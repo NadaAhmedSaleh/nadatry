@@ -1,48 +1,46 @@
-@import './global.scss';
-.check-out-main-container{
-    font-family: Sans-serif;
-    width: 800px;
-    height: 600px;
-    display: flex;
-    flex-direction: column;
 
-    border: 4px solid black;
-}
+@import "./global.scss";
+$min-normal-width:768px;
 
-.check-out-sub-container{
-   
-    height: 90%;
+.cart-page-container{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-   
-}
+    margin-top: 150px;
+    height: 80;
 
-.order-summary-header{
-    text-align: center;
-    width: 100%;
-    font-weight: bolder;
-    font-size: x-large;
-    color: white;
-    background-color: $primary-gray;
+    @media (max-width: $min-normal-width) {
+        flex-direction: column;
+        align-items: center;
+    }
+
     
 }
-
-
-
-.order-summary-container{
-
-    overflow-y: auto;
-    width: 60%;
-    height: 80%;
-    border: 2px solid $primary-gray;
-    display: flex;
-    flex-direction: column;
-    margin: auto;
-    
+.cart-card{
+    background-color: white;
+    box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+    width:50% ;
+    margin-bottom: 10px;
+    @media (max-width: $min-normal-width) {
+        width:80% ;
+    }
 
 
 }
+
+.total-cost-card{
+    padding: 10px;
+    background-color: white;
+    box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+    width:30% ;
+    height: 150px;
+    @media (max-width: $min-normal-width) {
+        width:60% ;
+    }
+}
+
+
+
 
 
 .one-chosen-item-container{
@@ -62,20 +60,11 @@
     height: 50px;
 }
 
-.customer-info-container{
-    overflow-y: auto;
-    width: 25%;
-    height: 80%;
-    border: 2px solid $primary-gray;
-    display: flex;
-    flex-direction: column;
-    margin: auto;
-}
 
 
 .check-out-header{
     display: flex;
-    height: 5%;
+    height: 50px;
     width: 99%;
     padding: 5px;
     justify-content: space-between;
@@ -115,11 +104,15 @@
     }
 
 }
-.confirm-cart-button{
+.check-out-button{
     @include update-confirm-button;
-    background-color: green;
+    background-color: rgb(6, 9, 129);
+    margin-top: 4px;
+    font-weight: normal;
+    font-size: medium;
+    text-align: center;
     &:hover{
-        background-color: rgb(14, 192, 14);
+        background-color: rgb(65, 47, 233);
     }
 }
 
@@ -127,4 +120,12 @@
 .update-icons-container{
     display: flex;
     flex-direction: row;
+}
+
+.one-cost-line{
+    display: flex;
+    flex-direction: row;
+    font-weight: normal;
+    justify-content: space-between;
+    font-size: large;
 }
